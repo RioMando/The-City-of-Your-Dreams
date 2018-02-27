@@ -1,0 +1,18 @@
+#rankHolder {
+	width: 20%;
+	background-color: lightgray;
+	float: left;
+}
+
+#mapHolder {
+	width: 50%;
+	float: left;
+	margin-left: 1%;
+}
+
+#topCities {
+	width: 20%;
+	float: left;
+	background-color: lightblue;
+	margin-left: 1%;
+}
