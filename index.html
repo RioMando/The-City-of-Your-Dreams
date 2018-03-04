@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>THE City of your dreams</title>
+	<title>The City of your dreams</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-<!-- jquery library -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<!-- firebase -->
-	<!-- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script> -->
-    
-	<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-  	<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-
-   <!-- To link to an external javascript.js file-->
-   <!--  <script type="text/javascript" href="assets/javascript/javascript.js"></script> -->
 
 </head>
 
@@ -82,11 +70,46 @@
     <div id="top10display"></div>
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <span class="text-muted">Place sticky footer content here.</span>
-    </div>
-  </footer>
+      <!--Footer-->
+      <footer class="page-footer font-small blue pt-4 mt-4">
+      
+          <!--Footer Links-->
+          <div class="container-fluid text-center text-md-left">
+              <div class="row">
+      
+                  <!--First column-->
+                  <div class="col-md-6">
+                      <h5 class="text-uppercase">Footer Content</h5>
+                      <p>Here you can use rows and columns here to organize your footer content.</p>
+                  </div>
+                  <!--/.First column-->
+      
+                  <!--Second column-->
+                  <div class="col-md-6">
+                      <h5 class="text-uppercase">Links</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="#!">Link 1</a></li>
+                          <li><a href="#!">Link 2</a></li>
+                          <li><a href="#!">Link 3</a></li>
+                          <li><a href="#!">Link 4</a></li>
+                      </ul>
+                  </div>
+                  <!--/.Second column-->
+              </div>
+          </div>
+          <!--/.Footer Links-->
+      
+          <!--Copyright-->
+          <div class="footer-copyright py-3 text-center">
+              <div class="container-fluid">
+                  © 2015 Copyright: <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
+      
+              </div>
+          </div>
+          <!--/.Copyright-->
+      
+      </footer>
+      <!--/.Footer-->
 
 <!-- jquery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -129,15 +152,13 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
         $(this).attr("data-value", dataValue);
         dataValue = dataValue - .1;
     });
-    console.log(dataSplit);
     for (var i = 0; i < dataSplit.length; i++) {
         dataSplit[i] = parseInt(dataSplit[i].substr(dataSplit[i].indexOf("=") + 1, dataSplit[i].length - 1));
         values[dataSplit[i] - 1] = $("#ranking_" + dataSplit[i]).attr("data-value");
     }
-    console.log(values);
         return false;
     }); 
-	// urban area query
+	// Urban area query
     var uaList = ["aarhus", "adelaide", "albuquerque", "almaty", "amsterdam", "anchorage", "ankara", "asheville", "asuncion", "athens", "atlanta", "auckland", "austin", "baku", "bali", "bangkok", "barcelona", "beijing", "beirut", "belfast", "belgrade", "belize-city", "bengaluru", "berlin", "bern", "birmingham","bogota", "boise", "bologna", "bordeaux", "boston", "boulder", "bozeman", "bratislava", "brisbane", "bristol", "brussels", "bucharest", "budapest", "buenos-aires", "buffalo", "cairo", "calgary", "cambridge", "cape-town", "caracas", "cardiff", "casablanca", "charleston", "charlotte", "chattanooga", "chennai", "chiang-mai", "chicago", "chisinau", "christchurch", "cincinnati", "cleveland", "cluj-napoca", "cologne", "colorado-springs", "columbus", "copenhagen", "cork", "curitiba", "dallas", "dar-es-salaam", "delhi", "denver", "des-moines", "detroit", "doha", "dresden", "dubai", "dublin", "dusseldorf", "edinburgh", "edmonton", "eindhoven", "eugene", "florence", "florianopolis", "fort-collins", "frankfurt", "fukuoka", "gdansk", "geneva", "glasgow", "gothenburg", "grenoble", "guadalajara", "guatemala-city", "halifax", "hamburg", "hannover", "havana", "helsinki", "ho-chi-minh-city", "hong-kong", "honolulu", "houston", "hyderabad", "indianapolis", "innsbruck", "istanbul", "jacksonville", "jakarta", "johannesburg", "kansas-city", "karlsruhe", "kathmandu", "kiev", "kingston", "knoxville", "krakow", "kuala-lumpur", "lagos", "la-paz", "las-palmas-de-gran-canaria", "las-vegas","lausanne", "leipzig", "lille", "lima", "lisbon", "liverpool", "ljubljana", "london", "los-angeles", "louisville", "luxembourg", "lviv", "lyon", "madison", "madrid", "malaga", "malmo", "managua", "manchester", "manila", "marseille", "medellin", "melbourne", "memphis", "mexico-city", "miami", "milan", "milwaukee", "minneapolis-saint-paul", "minsk", "montevideo", "montreal", "moscow", "mumbai", "munich", "nairobi", "nantes", "naples", "nashville", "new-orleans", "new-york", "nice", "nicosia", "oklahoma-city", "omaha", "orlando", "osaka", "oslo", "ottawa", "oulu", "oxford", "palo-alto", "panama", "paris", "perth", "philadelphia", "phnom-penh", "phoenix", "phuket", "pittsburgh", "portland-me", "portland-or", "porto", "porto-alegre", "prague", "providence", "quito", "raleigh", "reykjavik", "richmond", "riga", "rio-de-janeiro", "riyadh", "rochester", "rome", "rotterdam", "saint-petersburg", "salt-lake-city", "san-antonio", "san-diego", "san-francisco-bay-area", "san-jose", "san-juan", "san-luis-obispo", "san-salvador", "santiago", "santo-domingo", "sao-paulo", "sarajevo", "saskatoon", "seattle", "seoul", "seville", "shanghai", "singapore", "skopje", "sofia", "st-louis", "stockholm", "stuttgart", "sydney", "taipei", "tallinn", "tampa-bay-area", "tampere", "tartu", "tashkent", "tbilisi", "tehran", "tel-aviv", "the-hague", "thessaloniki", "tokyo", "toronto", "toulouse", "tunis", "turin", "turku", "uppsala", "utrecht", "valencia", "valletta", "vancouver", "victoria", "vienna", "vilnius", "warsaw", "washington-dc", "wellington", "winnipeg", "wroclaw", "yerevan", "zagreb", "zurich"];
 
     //storing values
@@ -157,7 +178,6 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
             var selected = $(this).val();
             values.push(selected);
         });
-        console.log(values);
     	getScore(countArrayCities);
     });
     	// urban area scores
@@ -169,13 +189,10 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
 				url: scoreURL,
 				method: "GET"
 			}).done(function(response) {
-				// console.log(response);
 				var results = response.categories;
 				var score = 0;
 				cityScoreAccumulated = 0;
-				// console.log(results);
 				var summary = response.summary;
-				// console.log(summary);
 			
 				for (var j = 0; j < 17; j++) {
 					score = response.categories[j].score_out_of_10;
@@ -186,10 +203,7 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
 				arrayScoredCities();
 			});// End .done()
         }//End if-else
-
     } //End function getScore()
-
-    // });
 
     //Function to make the array of the cities with overall and call to organize and locate cities
     function arrayScoredCities() {
@@ -203,18 +217,14 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
         // organizeCities(citiesScored);
         m++;
         if (m == uaList.length && citiesCounter === true) {   // <<<<<<<<<<< LOOK: Return to m === 254 when file is debuged
-            console.log("cities");
             organizeCities(); 
             citiesCounter = false;
             cityLocation(locationCounter);
         }
     }; //End of arrayScoredCities
 
-    console.log("Sorted: " , citiesScored);
-
     // Sorting of the array with bubble sort method
     function organizeCities(){
-        console.log(citiesScored);
         var len = citiesScored.length;
         for (var i = len-1; i >= 0; i=i-1){
           for(var j = 1; j <= i; j++){
@@ -236,7 +246,6 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
 				url: locationURL,
 				method: "GET"
 			}).done(function(response) {
-			//console.log(response);
 	       		var latitude = (response.bounding_box.latlon.north + response.bounding_box.latlon.south)/2;
 	   		    var longitude = (response.bounding_box.latlon.west + response.bounding_box.latlon.east)/2;
 	     		locs.push({lat: latitude, lng: longitude});
@@ -253,7 +262,6 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
             displayTenTopCities();
             initMap();
         }//End of if-else-if
-
     } //End of cityLocation
 
     //Function to display the top 10 cities before the map
@@ -261,7 +269,6 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
         for (l = 0; l<10; l++) {
             var res = String.fromCharCode(65+l);
             displayCity = (res+". "+citiesScored[l].city + " " + (citiesScored[l].score).toFixed(4)+",   ");
-            console.log(displayCity);
             $("#top10display").append(displayCity);
         }
     }//End of displayTenTopCities()
