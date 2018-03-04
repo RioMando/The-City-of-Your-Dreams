@@ -1,4 +1,4 @@
-<script>
+
 
 var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "Travel Conectivity", "Commute", "Business Freedom", "Safety", "Healthcare", "Education", "Environmental Quality", "Economy", "Taxation", "Internet Access", "Leixure & Culture", "Tolerance", "Outdors"];
    	var values = [];
@@ -191,12 +191,11 @@ var categories = ["Housing", "Cost of Living", "Startups", "Venture Capital", "T
         var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
     } //End function initMap()
 
-</script>
 
-// <!-- google api -->
-// <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-// </script>
+
+// <!-- google api -->  //
+src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"
+
 
 // <!-- render map -->
-// <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQRt4CNGQ8gYV01AuKqMSYBbxX1-F7QQ0&callback=initMap">
-// </script>
+defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQRt4CNGQ8gYV01AuKqMSYBbxX1-F7QQ0&callback=initMap"
