@@ -2,28 +2,36 @@ body {
 	background-image: url("../images/baltimore.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	min-height: 750px;
 }
 
 #map{
-   	height: 400px;
+   	height: 500px;
    	width: 100%;
 }
 
 #rankHolder {
+	max-width: 225px;
 	width: 25%;
 	background-color: lightgray;
 	float: left;
+	padding: 10px;
+	margin: 25px;
 }
 
 #mapHolder {
-	width: 48%;
+	width: 50%;
 	float: left;
-	margin-left: 1%;
+	margin: 25px;
 }
 
 #topCities {
+	margin: 25px;
 	width: 25%;
 	float: left;
 	background-color: lightblue;
-	margin-left: 1%;
+}
+
+.container {
+	padding-top: 60px;
 }
