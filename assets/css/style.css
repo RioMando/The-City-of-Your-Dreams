@@ -1,6 +1,6 @@
 body {
-	/*background-image: url("../images/baltimore.jpg");*/
-	background-image: url("https://github.com/RioMando/The-City-of-Your-Dreams/blob/master/assets/images/Baltimore.jpg");
+	background-image: url("../images/baltimore.jpg");
+/*	background-image: url("https://github.com/RioMando/The-City-of-Your-Dreams/blob/master/assets/images/Baltimore.jpg");*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 750px;
