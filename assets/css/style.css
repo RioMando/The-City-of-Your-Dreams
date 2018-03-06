@@ -1,41 +1,77 @@
 body {
-/*background-image:
-			    linear-gradient(
-			      rgba(0, 0, 0, 0.1), 
-			      rgba(0, 0, 0, 0.1)
-			    ), url("../images/baltimore.jpg");*/
-					background-image: url("../images/Baltimore.jpg");
-			    background-repeat: no-repeat;
 
-
-			height: 700px;
-			width: 100%;
-			background-size:cover;
 }
 
+.mainContainer {
+	padding-top: 50px;
+	background-image: url("../images/Baltimore.jpg");
+  background-repeat: no-repeat;
+	height: 700px;
+	width: 100%;
+	background-size:cover;
+}
+
+/* Map box container */
 #map{
    	height: 500px;
    	width: 100%;
 }
 
-#rankHolder {
-	max-width: 225px;
-	width: 25%;
-	background-color: lightgray;
-	float: left;
-	padding: 10px;
-	margin: 25px;
-}
-
+/* Specifics for map holder box */
 #mapHolder {
 	width: 50%;
 	float: left;
 	margin: 25px;
 }
 
-#topCities {
-	margin: 25px;
-	width: 25%;
+/* City Attributes and Vities result box containers format */
+#rankHolder, #topCities {
+	max-width: 225px;
+	width: 22%;
+	background-color: #717;
+	opacity: 0.8;
+	color: white;
 	float: left;
-	background-color: lightblue;
+	padding: 10px;
+	margin: 25px;
 }
+
+#top10display {
+	letter-spacing: 2px;
+}
+
+.titleTable {
+	text-align: center;
+	font-weight: bold;
+	font-size: large;
+	color: white;
+}
+
+.container {
+	padding-top: 20px;
+	padding: 20px, 50px, 0px, 50px; 
+	background-color: black;
+
+}
+
+#footer {
+	background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+  max-height: 35px;
+
+}
+
+.footerContainer {
+  border-style: solid;
+  border-width: 3px 0px 0px 0px;
+  border-color: gray;
+}
+   /* border-style: solid;
+    border-width: 2px 10px 4px 20px;*/

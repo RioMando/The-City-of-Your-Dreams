@@ -10,66 +10,77 @@
 </head>
 
 <body>
-    <!-- Header navgar from Bootstrap -->
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">The City of Your Dreams</a>
-          </div>
+  <!-- Header navgar from Bootstrap -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">The City of Your Dreams</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Instructions</a></li>
+            <li><a href="#">Documentation</a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Instruction</a></li>
-              <li><a href="#">Documentation</a></li>
-            </ul>
+  <div class="mainContainer">
+    <!-- List of attributes to be selected by the user -->
+    <div id="rankHolder">
+        <form method="POST">
+          <div id="list-container">
+            <input type="hidden" name="key" value="{{election.key}}">
+            <input type="hidden" name="uuid" value="{{uuid}}">
+            <input type='hidden' name='thedata' id='thedata'>
+                <div id="ballot" class="center">
+                    <div class="titleTable">City Attributes</div>
+                    <ol id="sortable" class="rankings">
+                        <li id='ranking_1' class="ranking">Housing</li>
+                        <li id='ranking_2' class="ranking">Cost of Living</li>
+                        <li id='ranking_3' class="ranking">Startups</li>
+                        <li id='ranking_4' class="ranking">Venture Capital</li>
+                        <li id='ranking_5' class="ranking">Travel Connectivity</li>
+                        <li id='ranking_6' class="ranking">Commute</li>
+                        <li id='ranking_7' class="ranking">Business Freedom</li>
+                        <li id='ranking_8' class="ranking">Safety</li>
+                        <li id='ranking_9' class="ranking">Healthcare</li>
+                        <li id='ranking_10' class="ranking">Education</li>
+                        <li id='ranking_11' class="ranking">Environmental Quality</li>
+                        <li id='ranking_12' class="ranking">Economy</li>
+                        <li id='ranking_13' class="ranking">Taxation</li>
+                        <li id='ranking_14' class="ranking">Internet Access</li>
+                        <li id='ranking_15' class="ranking">Leisure and Culture</li>
+                        <li id='ranking_16' class="ranking">Tolerance</li>
+                        <li id='ranking_17' class="ranking">Outdoors</li>
+                    </ol>
+                </div>
+            <button class="btn btn-primary center-block btn-block" type='submit' id="submit">Submit</button>
           </div>
-      </div>
-    </nav>
+      </form>
+    </div>
 
-<!-- List of attributes to be selected by the user -->
-<div id="rankHolder">
-    <form method="POST">
-      <div id="list-container">
-        <input type="hidden" name="key" value="{{election.key}}">
-        <input type="hidden" name="uuid" value="{{uuid}}">
-        <input type='hidden' name='thedata' id='thedata'>
-            <div id="ballot" class="center">
-                <ol id="sortable" class="rankings">
-                    <li id='ranking_1' class="ranking">Housing</li>
-                    <li id='ranking_2' class="ranking">Cost of Living</li>
-                    <li id='ranking_3' class="ranking">Startups</li>
-                    <li id='ranking_4' class="ranking">Venture Capital</li>
-                    <li id='ranking_5' class="ranking">Travel Connectivity</li>
-                    <li id='ranking_6' class="ranking">Commute</li>
-                    <li id='ranking_7' class="ranking">Business Freedom</li>
-                    <li id='ranking_8' class="ranking">Safety</li>
-                    <li id='ranking_9' class="ranking">Healthcare</li>
-                    <li id='ranking_10' class="ranking">Education</li>
-                    <li id='ranking_11' class="ranking">Environmental Quality</li>
-                    <li id='ranking_12' class="ranking">Economy</li>
-                    <li id='ranking_13' class="ranking">Taxation</li>
-                    <li id='ranking_14' class="ranking">Internet Access</li>
-                    <li id='ranking_15' class="ranking">Leisure and Culture</li>
-                    <li id='ranking_16' class="ranking">Tolerance</li>
-                    <li id='ranking_17' class="ranking">Outdoors</li>
-                </ol>
-            </div>
-        <button class="btn btn-primar" type='submit' id="submit">Submit</button>
-      </div>
-  </form>
+    <!-- div to hold the rendered map -->
+    <div id="mapHolder">
+      <div id="map"></div>
+    </div>
+
+      <!-- div to render the list of the top 10 cities -->
+    <div id="topCities">
+      <div class="titleTable">Your top 10 cities</div>
+      <br>
+      <div id="top10display"></div>
+    </div>
   </div>
 
-  <!-- div to hold the rendered map -->
-  <div id="mapHolder">
-    <div id="map"></div>
-  </div>
-
-  <!-- div to render the list of the top 10 cities -->
-  <div id="topCities">
-    <div id="top10display"></div>
+  <!-- Footer -->
+  <div id="footer" class="footerContainer">
+    <!-- <div class="container"> -->
+      <p class="text-muted">&#169 2018 by Logan & Robles.</p>
+    <!-- </div> -->
   </div>
 
 
