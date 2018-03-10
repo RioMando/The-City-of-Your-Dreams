@@ -1,5 +1,5 @@
 body {
-
+	background-image: url("../images/darkness.png");
 }
 
 .mainContainer {
@@ -62,9 +62,9 @@ body {
   width: 100%;
   color: white;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
   font-weight: bold;
-  max-height: 35px;
+  max-height: 50px;
 
 }
 
@@ -73,5 +73,3 @@ body {
   border-width: 3px 0px 0px 0px;
   border-color: gray;
 }
-   /* border-style: solid;
-    border-width: 2px 10px 4px 20px;*/
